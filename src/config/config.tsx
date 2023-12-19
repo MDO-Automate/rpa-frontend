@@ -4,7 +4,7 @@
 const configApp =  {
     uriApi : 'http://192.168.121.5:3050',
     novHeadersName: ['Importante', 'Rutinario', 'Historial'],
-    roles: ['CMO', 'Mantenimiento', 'Admin'],
+    roles: ['CMO', 'Mantenimiento', 'Admin', 'Despachos', 'Consultor'],
     cantUnidades : 112
 }
 

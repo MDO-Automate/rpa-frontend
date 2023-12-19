@@ -7,6 +7,9 @@ import { useState } from 'react'
 import { User } from '../../../types'
 import SectionBTNUsersCrud from './SectionBTNUsersCrud'
 
+import configApp from '../../../config/config'
+
+
 interface Props {
     userSelected: User | undefined
     setUserSelected: React.Dispatch<React.SetStateAction<User | undefined>>
@@ -45,10 +48,11 @@ const FormUser = ({ userSelected, setUserSelected, id, handlerGetUsers, rol, set
                     variant="static" 
                     label="Rol"
                     onChange={(valor)=> handlerRol(valor)}
-                >
-                    <Option value='CMO'>CMO</Option>
-                    <Option value='Mantenimiento'>Mantenimiento</Option>
-                    <Option value='Admin'>Admin</Option>
+                >   
+
+                    {configApp.roles.map(item =>  
+                        <Option value={item}>{item}</Option>
+                    )}
                 </Select>
             </div>
             <div className='mt-5 w-1/3'>
